@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours Europe+ Matériaux/Batteries — Présentation | Pôle MecaTech</title>
+<style>
+  :root{
+    --indigo:#262669;         /* Pôle MecaTech base */
+    --indigo-2:#2e2e7a;
+    --indigo-3:#191b52;
+    --violet:#6666c9;         /* accent principal */
+    --violet-2:#5959d0;
+    --purple:#7043ab;         /* accent secondaire */
+    --purple-2:#5b2785;
+    --blue-l:#b2d1ff;         /* touches claires */
+    --blue-l2:#d1e3ff;
+    --lav:#d6d6ff;            /* fond lavande */
+    --lav-b:#f7f7ff;
+    --white:#ffffff;
+    --text:#191b52;
+    --muted:#44449d;
+    --line:#d6d6ff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+    color:var(--text);background:var(--lav-b);line-height:1.55;
+  }
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(38,38,105,.96);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:0 4vw;
+  }
+  nav .inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  nav .brand{color:#fff;font-weight:700;font-size:1.05rem;letter-spacing:.4px;display:flex;align-items:center;gap:10px;}
+  nav .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--blue-l);box-shadow:0 0 10px var(--blue-l);}
+  nav .links{display:flex;gap:26px;list-style:none;}
+  nav .links a{color:#d6d6ff;text-decoration:none;font-size:.9rem;transition:color .2s;}
+  nav .links a:hover{color:var(--blue-l);}
+  nav .cta{background:var(--violet);color:#fff;padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600;transition:background .2s;}
+  nav .cta:hover{background:var(--violet-2);}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;}
+  .burger span{width:22px;height:2px;background:#fff;}
+
+  /* ---------- HERO ---------- */
+  header{
+    background:linear-gradient(135deg,#191b52 0%,#262669 50%,#2e2e7a 100%);
+    color:#fff;padding:150px 4vw 90px;position:relative;overflow:hidden;
+  }
+  header::before{content:"";position:absolute;top:-120px;right:-120px;width:440px;height:440px;border-radius:50%;
+    background:radial-gradient(circle,rgba(112,67,171,.30),transparent 70%);}
+  header::after{content:"";position:absolute;bottom:-80px;left:-60px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle,rgba(178,209,255,.14),transparent 70%);}
+  header .hero{max-width:1180px;margin:0 auto;position:relative;z-index:2;}
+  header .eyebrow{color:var(--blue-l);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:.78rem;margin-bottom:18px;}
+  header h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;font-weight:800;max-width:820px;}
+  header h1 .accent{color:var(--blue-l);}
+  header p.sub{margin-top:20px;font-size:clamp(1rem,1.8vw,1.2rem);color:#d6d6ff;max-width:720px;}
+  .hero-stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:38px;align-items:center;}
+  .stat-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+    padding:10px 16px;border-radius:10px;font-size:.85rem;color:#e2e6ff;display:flex;gap:8px;align-items:center;}
+  .stat-chip b{color:var(--blue-l);font-size:1.15rem;}
+  .hero-btns{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .btn-primary{background:var(--violet);color:#fff;padding:14px 26px;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s;}
+  .btn-primary:hover{background:var(--violet-2);transform:translateY(-1px);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:600;transition:.2s;}
+  .btn-ghost:hover{border-color:var(--blue-l);color:var(--blue-l);}
+
+  /* ---------- SECTION COMMON ---------- */
+  section{padding:70px 4vw;}
+  section .wrap{max-width:1180px;margin:0 auto;}
+  .sec-head{text-align:center;max-width:760px;margin:0 auto 46px;}
+  .sec-head .tag{color:var(--violet-2);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:.75rem;}
+  .sec-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--indigo);margin-top:8px;}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:1rem;}
+
+  /* ---------- STRATEGIC SECTORS ---------- */
+  .sectors{position:relative;background:#fff;}
+  .cat-block{margin-bottom:40px;}
+  .cat-title{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .cat-title h3{color:var(--indigo);font-size:1.05rem;font-weight:800;}
+  .cat-badge{background:linear-gradient(135deg,var(--violet),var(--purple));color:#fff;font-size:.72rem;
+    font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:20px;flex-shrink:0;}
+  .cat-badge.bat{background:linear-gradient(135deg,var(--purple),var(--purple-2));}
+  .sector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .sector-card.wide{grid-column:1 / -1;}
+  .sector-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px 24px;
+    transition:.25s;box-shadow:0 2px 10px rgba(38,38,105,.05);}
+  .sector-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(38,38,105,.1);border-color:var(--violet);}
+  .sector-card .icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem;margin-bottom:18px;color:#fff;}
+  .ic-blue{background:linear-gradient(135deg,#5959d0,#44449d);}
+  .ic-teal{background:linear-gradient(135deg,#6666c9,#44449d);}
+  .ic-gold{background:linear-gradient(135deg,#7043ab,#5b2785);}
+  .ic-purple{background:linear-gradient(135deg,#8b7bdd,#5b2785);}
+  .ic-green{background:linear-gradient(135deg,#6666c9,#2e2e7a);}
+  .sector-card h3{font-size:1.15rem;color:var(--indigo);margin-bottom:8px;}
+  .sector-card p{color:var(--muted);font-size:.92rem;}
+  .sector-card .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+  .sector-card .tag{background:var(--lav-b);color:var(--indigo-2);font-size:.76rem;padding:4px 9px;border-radius:20px;border:1px solid var(--lav);}
+  .sector-card .topics-list{list-style:none;margin-top:10px;}
+  .sector-card .topics-list li{font-size:.85rem;line-height:1.45;color:var(--muted);padding:5px 0 5px 18px;position:relative;}
+  .sector-card .topics-list li::before{content:"▸";position:absolute;left:0;color:var(--purple);}
+  .sector-card .topics-list li b{color:var(--indigo);}
+
+  /* ---------- DOMAINS ---------- */
+  .domains{background:linear-gradient(180deg,#f7f7ff,#eceefb);}
+  .domain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .domain-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 18px;
+    display:flex;align-items:center;gap:14px;transition:.2s;}
+  .domain-item:hover{border-color:var(--violet);box-shadow:0 8px 20px rgba(38,38,105,.08);}
+  .domain-item .n{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--violet),var(--violet-2));
+    color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.95rem;}
+  .domain-item h4{font-size:.95rem;color:var(--indigo);}
+  .domain-item p{font-size:.78rem;color:var(--muted);}
+  .domain-grid.bat-grid .domain-item .n{background:linear-gradient(135deg,var(--purple),var(--purple-2));font-size:1rem;}
+
+  /* ---------- WHY / VALUE ---------- */
+  .value{background:#fff;}
+  .value-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+  .value-card{display:flex;gap:16px;padding:22px;border-radius:14px;border:1px solid var(--line);background:var(--lav-b);}
+  .value-card .vi{font-size:1.6rem;}
+  .value-card h3{color:var(--indigo);font-size:1rem;margin-bottom:5px;}
+  .value-card p{color:var(--muted);font-size:.9rem;}
+
+  /* ---------- PROOF NUMBERS ---------- */
+  .proof{background:linear-gradient(135deg,#191b52,#2e2e7a);color:#fff;}
+  .proof .sec-head h2{color:#fff;}
+  .proof .sec-head p{color:#d6d6ff;}
+  .proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;margin-top:10px;}
+  .proof-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;
+    padding:26px 20px;text-align:center;}
+  .proof-card .big{font-size:2.2rem;font-weight:800;color:var(--blue-l);}
+  .proof-card .big b{color:#c8a6ff;}
+  .proof-card p{color:#d6d6ff;font-size:.85rem;margin-top:6px;}
+  .proof-card .small{font-size:.72rem;color:#9aa0e0;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:#fff;}
+  .service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .service-card{border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;overflow:hidden;}
+  .service-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--violet);}
+  .service-card .freq{position:absolute;top:16px;right:18px;background:var(--lav-b);color:var(--violet-2);
+    font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:20px;border:1px solid var(--lav);}
+  .service-card h3{color:var(--indigo);font-size:1.05rem;margin-bottom:8px;padding-right:70px;}
+  .service-card p{color:var(--muted);font-size:.9rem;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{background:var(--lav-b);}
+  .tl-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+  .tl-block{border-radius:14px;padding:22px;background:#fff;border:1px solid var(--line);}
+  .tl-block .q{font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--violet-2);}
+  .tl-block ul{list-style:none;margin-top:12px;}
+  .tl-block li{font-size:.88rem;color:var(--text);padding:6px 0 6px 20px;position:relative;}
+  .tl-block li::before{content:"▸";position:absolute;left:0;color:var(--purple);}
+
+  /* ---------- CTA ---------- */
+  .cta-band{background:linear-gradient(135deg,#6666c9,#44449d);color:#fff;text-align:center;padding:64px 4vw;}
+  .cta-band h2{font-size:clamp(1.5rem,2.6vw,2.2rem);max-width:680px;margin:0 auto 12px;}
+  .cta-band p{color:rgba(255,255,255,.92);margin-bottom:26px;font-size:1rem;}
+  .cta-band .btn-white{background:#fff;color:var(--indigo);padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s;}
+  .cta-band .btn-white:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.16);}
+
+  footer{background:#191b52;color:#9aa0e0;padding:34px 4vw;font-size:.82rem;}
+  footer .wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    nav .links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--indigo);
+      flex-direction:column;padding:16px 4vw;gap:16px;border-bottom:1px solid rgba(255,255,255,.08);}
+    nav .links.open{display:flex;}
+    .burger{display:flex;}
+    header{padding-top:110px;}
+    .hero-stats{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="inner">
+    <div class="brand"><span class="dot"></span> Parcours Europe+ <span style="color:var(--blue-l)">Matériaux/Batteries</span></div>
+    <ul class="links" id="menu">
+      <li><a href="#secteurs">Secteurs</a></li>
+      <li><a href="#domaines">Domaines</a></li>
+      <li><a href="#preuves">Résultats</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#calendrier">Calendrier</a></li>
+    </ul>
+    <a class="cta" href="#contact">Rejoindre</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top">
+  <div class="hero">
+    <div class="eyebrow">Programme d'accompagnement R&I · Wallonie → Europe</div>
+    <h1>Votre tremplin vers les <span class="accent">financements européens</span> en matériaux &amp; batteries</h1>
+    <p class="sub">Un accompagnement mutualisé qui vous ouvre les appels Horizon Europe, les partenariats BATT4EU &amp; IAM4EU, et un réseau européen. Éprouvé depuis 2022, désormais élargi des batteries aux matériaux avancés.</p>
+    <div class="hero-stats">
+      <div class="stat-chip"><b>18</b> organisations accompagnées</div>
+      <div class="stat-chip"><b>5</b> projets financés</div>
+      <div class="stat-chip"><b>×12,5</b> effet de levier</div>
+      <div class="stat-chip"><b>2,5 M€</b> financements confirmés</div>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#contact">Rejoindre le programme</a>
+      <a class="btn-ghost" href="#secteurs">Découvrir les secteurs</a>
+    </div>
+  </div>
+</header>
+
+<!-- STRATEGIC SECTORS -->
+<section class="sectors" id="secteurs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Secteurs stratégiques</div>
+      <h2>Un programme couvrant les matériaux de demain</h2>
+      <p>Le Parcours Europe+ s'appuie sur deux partenariats européens complémentaires : les batteries (BATT4EU) et les matériaux avancés (IAM4EU).</p>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-title"><span class="cat-badge">IAM4EU</span><h3>Matériaux Avancés — Innovative Advanced Materials for Europe</h3></div>
+      <div class="sector-grid">
+
+        <div class="sector-card">
+          <div class="icon ic-blue">🧪</div>
+          <h3>Advanced Materials</h3>
+          <p>Matériaux avancés et manufacturés : de la formulation au composant intégré.</p>
+          <div class="tags"><span class="tag">Polymères</span><span class="tag">Composites</span><span class="tag">Aimants</span><span class="tag">Céramiques</span></div>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-teal">♻️</div>
+          <h3>Circularité &amp; Recyclage</h3>
+          <p>Concevoir et produire dans l'économie circulaire, de la conception au marché.</p>
+          <div class="tags"><span class="tag">Design-to-market</span><span class="tag">Économie circulaire</span></div>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-gold">⚙️</div>
+          <h3>Manufacturing Avancé</h3>
+          <p>Procédés durables et sobres en matières premières critiques (CRMs).</p>
+          <div class="tags"><span class="tag">Réduction CRM</span><span class="tag">Procédés durables</span></div>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-purple">🤖</div>
+          <h3>Digitalisation / IA</h3>
+          <p>Accélérer la découverte et l'optimisation des matériaux par le numérique.</p>
+          <div class="tags"><span class="tag">IA &amp; simulation</span><span class="tag">Découverte de matériaux</span></div>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-green">🌱</div>
+          <h3>Énergie &amp; Décarbonation</h3>
+          <p>Procédés bas-carbone au service de la transition énergétique.</p>
+          <div class="tags"><span class="tag">Procédés bas-carbone</span><span class="tag">Énergie</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3>Batteries — European Partnership for Batteries</h3></div>
+      <div class="sector-grid">
+
+        <div class="sector-card">
+          <div class="icon ic-blue">🔋</div>
+          <h3>Technologies nouvelles &amp; émergentes</h3>
+          <p>Exploration des concepts de cellules post-lithium-ion et des innovations de rupture.</p>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-teal">⛏️</div>
+          <h3>Matières premières &amp; recyclage</h3>
+          <p>Sécurisation de l'approvisionnement, approches éthiques et procédés de recyclage en fin de vie.</p>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-gold">🧬</div>
+          <h3>Matériaux avancés</h3>
+          <p>Développement et caractérisation de nouveaux composants pour les électrodes et les électrolytes.</p>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-purple">🏭</div>
+          <h3>Conception &amp; fabrication de cellules</h3>
+          <p>Amélioration des processus industriels de production et de l'efficacité des gigafactories.</p>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-green">🚗</div>
+          <h3>Applications de mobilité &amp; intégration</h3>
+          <p>Adaptation des systèmes de batteries pour les véhicules électriques et les transports.</p>
+        </div>
+
+        <div class="sector-card">
+          <div class="icon ic-blue">🏠</div>
+          <h3>Applications stationnaires &amp; intégration</h3>
+          <p>Stockage de l'énergie pour le réseau électrique et les énergies renouvelables.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DOMAINS -->
+<section class="domains" id="domaines">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Domaines d'application</div>
+      <h2>Conçu pour tous les secteurs industriels stratégiques</h2>
+      <p>Quel que soit votre domaine, le programme connecte votre R&amp;I aux bons appels européens.</p>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-title"><span class="cat-badge">IAM4EU</span><h3>Matériaux Avancés — domaines d'application</h3></div>
+      <div class="domain-grid">
+        <div class="domain-item"><div class="n">1</div><div><h4>Énergie &amp; Renouvelables</h4><p>Génération, stockage, efficacité</p></div></div>
+        <div class="domain-item"><div class="n">2</div><div><h4>Électronique &amp; Semiconducteurs</h4><p>Composants, matériaux, embarqué</p></div></div>
+        <div class="domain-item"><div class="n">3</div><div><h4>Manufacturing</h4><p>Industrialisation &amp; procédés</p></div></div>
+        <div class="domain-item"><div class="n">4</div><div><h4>Dispositifs Médicaux</h4><p>Matériaux biocompatibles &amp; innovation</p></div></div>
+        <div class="domain-item"><div class="n">5</div><div><h4>Mobilité</h4><p>Automotive, aérospatial, maritime</p></div></div>
+        <div class="domain-item"><div class="n">6</div><div><h4>Construction</h4><p>Matériaux durables &amp; bâtiment</p></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3>Batteries — domaines d'application</h3></div>
+      <div class="domain-grid bat-grid">
+        <div class="domain-item">
+          <div class="n">🚗</div>
+          <div><h4>Mobilité électrique</h4><p>L'électrification des véhicules routiers reste le premier moteur de la demande.</p></div>
+        </div>
+        <div class="domain-item">
+          <div class="n">⚡</div>
+          <div><h4>Transition énergétique</h4><p>Le stockage stationnaire pour la stabilité des réseaux et l'intégration des énergies renouvelables.</p></div>
+        </div>
+        <div class="domain-item">
+          <div class="n">✈️</div>
+          <div><h4>Aéronautique et défense</h4><p>Des applications de pointe exigeant des densités d'énergie élevées et des standards de sécurité rigoureux.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROOF NUMBERS -->
+<section class="proof" id="preuves">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Résultats 2022-2026</div>
+      <h2>Des résultats concrets, mesurables</h2>
+      <p>Le bilan du Parcours Europe Batteries parle de lui-même.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card"><div class="big">18</div><p>Organisations wallonnes accompagnées</p></div>
+      <div class="proof-card"><div class="big">5</div><p>Projets européens financés</p><div class="small">3 Horizon Europe · 1 Eurocluster · 1 Eureka</div></div>
+      <div class="proof-card"><div class="big">2,5 M€</div><p>Financements européens confirmés</p></div>
+      <div class="proof-card"><div class="big">×12,5</div><p>Effet de levier</p><div class="small">12,5 € de financement pour 1 € investi</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="value" id="valeur">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Pourquoi nous rejoindre</div>
+      <h2>Un accompagnement mutualisé, une efficacité décuplée</h2>
+      <p>Remplacer les approches isolées par un réseau coordonné : c'est la clé du succès en Europe.</p>
+    </div>
+    <div class="value-cols">
+      <div class="value-card"><div class="vi">🌍</div><div><h3>Réseau européen</h3><p>Connections partenaires internationales, au-delà des frontières wallonnes.</p></div></div>
+      <div class="value-card"><div class="vi">🎯</div><div><h3>Veille ciblée</h3><p>Overviews des marchés et des appels européens, sans effort de recherche.</p></div></div>
+      <div class="value-card"><div class="vi">🧭</div><div><h3>Coaching 1:1</h3><p>Suivi personnalisé pour maximiser vos chances de décrocher un projet EU.</p></div></div>
+      <div class="value-card"><div class="vi">🤝</div><div><h3>Mutualisation</h3><p>Un coût partagé pour un accès professionnel aux appels européens.</p></div></div>
+      <div class="value-card"><div class="vi">📈</div><div><h3>Interface policy</h3><p>Une fenêtre sur la programmation européenne et l'influence des sujets.</p></div></div>
+      <div class="value-card"><div class="vi">🔍</div><div><h3>Visibilité</h3><p>Votre organisation positionnée dans le paysage R&amp;I européen.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Services inclus</div>
+      <h2>Ce que le programme vous offre</h2>
+      <p>Un menu complet d'accompagnement, adapté à chaque membre.</p>
+    </div>
+    <div class="service-list">
+      <div class="service-card"><span class="freq">1× / an</span><h3>Mission R&amp;I</h3><p>Au moins une mission collective par an pour nouer des contacts européens.</p></div>
+      <div class="service-card"><span class="freq">2× / an</span><h3>Network R&amp;I</h3><p>Deux réunions de l'écosystème wallon par an.</p></div>
+      <div class="service-card"><span class="freq">2× / an</span><h3>Overview Market &amp; Policy</h3><p>Vues d'ensemble des marchés et des politiques européennes.</p></div>
+      <div class="service-card"><span class="freq">2× / an</span><h3>Overview R&amp;I</h3><p>Vues d'ensemble des appels européens, avec possibilité d'influencer les sujets.</p></div>
+      <div class="service-card"><span class="freq">2× / an</span><h3>Coaching 1:1</h3><p>Accompagnement personnalisé pour augmenter vos chances de succès.</p></div>
+      <div class="service-card"><span class="freq">1+ / an</span><h3>Matchmaking</h3><p>Mise en relation ciblée sur les appels BATT4EU et IAM4EU.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="calendrier">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Calendrier 12 mois</div>
+      <h2>Une feuille de route sur l'année (tentative)</h2>
+    </div>
+    <div class="tl-wrap">
+      <div class="tl-block">
+        <div class="q">Q3 2026</div>
+        <ul>
+          <li>Réunion écosystème Batteries / Matériaux</li>
+          <li>Accompagnement individuel</li>
+          <li>Matchmaking BATT4EU · IAM4EU</li>
+        </ul>
+      </div>
+      <div class="tl-block">
+        <div class="q">Q4 2026</div>
+        <ul>
+          <li>Accompagnement individuel continu</li>
+          <li>Suivi des appels européens</li>
+        </ul>
+      </div>
+      <div class="tl-block">
+        <div class="q">Q1 2027</div>
+        <ul>
+          <li>Visite FR / DE / UK / NL</li>
+          <li>Réunion écosystème Batteries / Matériaux</li>
+        </ul>
+      </div>
+      <div class="tl-block">
+        <div class="q">Q2 2027</div>
+        <ul>
+          <li>Conférence Batteries</li>
+          <li>Conférence Matériaux</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <h2>Rejoignez le prochain cercle de la R&amp;I wallonne vers l'Europe</h2>
+  <p>Places limitées pour l'édition 2026-2027 — <strong>minimum 10 acteurs</strong> pour lancer le programme.</p>
+  <a class="btn-white" href="https://outlook.office.com/bookwithme/user/9290d1b802844d64aab02470451c8dfc@polemecatech.be/meetingtype/d2jtWiR6z06w794jRPSEBw2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" target="_blank" rel="noopener">Prendre rendez-vous</a>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Pôle MecaTech</strong> · Parcours Europe+ Matériaux/Batteries — BATT4EU × IAM4EU</div>
+    <div>Avenue d'Ecolys 2 bte 33 · 5020 Namur (Ecolys) · Belgique</div>
+  </div>
+</footer>
+
+</body>
+</html>
