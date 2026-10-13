@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Acces membres - Parcours Europe+</title>
+<style>
+:root{--bleu:#262669;--violet:#7043ab}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:linear-gradient(135deg,#262669,#7043ab);color:#1a1a2e;padding:1.5rem}
+.card{background:#fff;border-radius:16px;padding:2.4rem 2rem;max-width:26rem;width:100%;
+  box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.tag{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--violet);font-weight:700;margin:0 0 .8rem}
+h1{font-size:1.35rem;color:var(--bleu);margin:0 0 .5rem}
+p.sub{color:#666;font-size:.92rem;margin:0 0 1.4rem}
+input{width:100%;padding:.85rem 1rem;border:1.5px solid #ddd;border-radius:9px;font-size:1rem;margin-bottom:.8rem}
+input:focus{outline:none;border-color:var(--violet)}
+button{width:100%;padding:.85rem;border:0;border-radius:9px;background:linear-gradient(135deg,#262669,#7043ab);
+  color:#fff;font-size:1rem;font-weight:700;cursor:pointer}
+button:hover{opacity:.92}
+.err{color:#c0392b;font-size:.88rem;min-height:1.2rem;margin:.7rem 0 0}
+</style>
+</head>
+<body>
+<div class="card">
+<p class="tag">Parcours Europe+ &middot; Espace membres</p>
+<h1>&#128274; Contenu r&eacute;serv&eacute; aux membres</h1>
+<p class="sub">Entrez le mot de passe pour acc&eacute;der &agrave; cette pr&eacute;sentation.</p>
+<form id="f">
+<input type="password" id="pwd" placeholder="Mot de passe" autocomplete="current-password" autofocus>
+<button type="submit">Acc&eacute;der</button>
+</form>
+<p class="err" id="err"></p>
+</div>
+<script>
+var SALT="BxyP2st8qxrRcXgordJ7uQ==", NONCE="skEuuuaRnfCySrBq", DATA="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";
+function b64(s){var bin=atob(s),b=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)b[i]=bin.charCodeAt(i);return b;}
+function derive(pwd){
+  return crypto.subtle.importKey('raw',new TextEncoder().encode(pwd),'PBKDF2',false,['deriveKey'])
+    .then(function(km){return crypto.subtle.deriveKey(
+      {name:'PBKDF2',salt:b64(SALT),iterations:200000,hash:'SHA-256'},
+      km,{name:'AES-GCM',length:256},false,['decrypt']);});
+}
+function tryDecrypt(pwd){
+  return derive(pwd).then(function(key){
+    return crypto.subtle.decrypt({name:'AES-GCM',iv:b64(NONCE)},key,b64(DATA));
+  }).then(function(pt){return new TextDecoder().decode(pt);});
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var saved=sessionStorage.getItem('peplus_pwd');
+  if(saved){tryDecrypt(saved).then(function(html){document.open();document.write(html);document.close();}).catch(function(){});}
+  document.getElementById('f').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var pwd=document.getElementById('pwd').value;
+    tryDecrypt(pwd).then(function(html){
+      sessionStorage.setItem('peplus_pwd',pwd);
+      document.open();document.write(html);document.close();
+    }).catch(function(){document.getElementById('err').textContent='Mot de passe incorrect.';});
+  });
+});
+</script>
+</body>
+</html>
