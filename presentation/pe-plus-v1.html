@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parcours Europe+ Matériaux/Batteries — Présentation | Pôle MecaTech</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Parcours Europe+ Materials/Batteries — Présentation · Deck | Pôle MecaTech</title>
 <style>
   :root{
     --indigo:#262669;         /* Pôle MecaTech base */
@@ -178,294 +179,283 @@
     .hero-stats{flex-direction:column;align-items:flex-start;}
   }
 </style>
+<style>#langswitch button.on{background:#fff;color:#262669}</style>
 <meta name="robots" content="noindex,nofollow"></head>
 <body>
-
 <!-- NAV -->
 <nav>
-  <div class="inner">
-    <div class="brand"><span class="dot"></span> Parcours Europe+ <span style="color:var(--blue-l)">Matériaux/Batteries</span></div>
-    <ul class="links" id="menu">
-      <li><a href="#secteurs">Secteurs</a></li>
-      <li><a href="#domaines">Domaines</a></li>
-      <li><a href="#preuves">Résultats</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#calendrier">Calendrier</a></li>
-    </ul>
-    <a class="cta" href="#contact">Rejoindre</a>
-    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="inner">
+<div class="brand"><img alt="Pôle MecaTech" src="../assets/logomecatech4-white.png" style="height:40px;display:block"/></div>
+<ul class="links" id="menu">
+<li><a data-en="Sectors" href="#secteurs">Secteurs</a></li>
+<li><a data-en="Domains" href="#domaines">Domaines</a></li>
+<li><a data-en="Results" href="#preuves">Résultats</a></li>
+<li><a data-en="Services" href="#services">Services</a></li>
+<li><a data-en="Calendar" href="#calendrier">Calendrier</a></li>
+</ul>
+<div id="langswitch" style="display:flex;gap:.35rem;margin-right:.7rem"><button class="on" data-lang="fr" onclick="setLang('fr')" style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:8px;padding:.25rem .6rem;font-size:.8rem;font-weight:700;cursor:pointer">FR</button><button data-lang="en" onclick="setLang('en')" style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:8px;padding:.25rem .6rem;font-size:.8rem;font-weight:700;cursor:pointer">EN</button></div><a class="cta" data-en="Join" href="#contact">Rejoindre</a>
+<button aria-label="Menu" class="burger" onclick="document.getElementById('menu').classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+</div>
 </nav>
-
 <!-- HERO -->
 <header id="top">
-  <div class="hero">
-    <div class="eyebrow">Programme d'accompagnement R&I · Wallonie → Europe</div>
-    <h1>Votre tremplin vers les <span class="accent">financements européens</span> en matériaux &amp; batteries</h1>
-    <p class="sub">Un accompagnement mutualisé qui vous ouvre les appels Horizon Europe, les partenariats BATT4EU &amp; IAM4EU, et un réseau européen. Éprouvé depuis 2022, désormais élargi des batteries aux matériaux avancés.</p>
-    <div class="hero-stats">
-      <div class="stat-chip"><b>18</b> organisations accompagnées</div>
-      <div class="stat-chip"><b>5</b> projets financés</div>
-      <div class="stat-chip"><b>×12,5</b> effet de levier</div>
-      <div class="stat-chip"><b>2,5 M€</b> financements confirmés</div>
-    </div>
-    <div class="hero-btns">
-      <a class="btn-primary" href="#contact">Rejoindre le programme</a>
-      <a class="btn-ghost" href="#secteurs">Découvrir les secteurs</a>
-    </div>
-  </div>
+<div class="hero">
+<div class="eyebrow" data-en="R&amp;I support programme · Wallonia → Europe">Programme d'accompagnement R&amp;I · Wallonie → Europe</div>
+<h1><span data-en="Your springboard to">Votre tremplin vers les </span><span class="accent" data-en="European funding">financements européens</span><span data-en="in materials &amp; batteries"> en matériaux &amp; batteries</span></h1>
+<p class="sub" data-en="A pooled support programme opening up Horizon Europe calls, the BATT4EU &amp; IAM4EU partnerships and a European network. Proven since 2022, now extended from batteries to advanced materials.">Un accompagnement mutualisé qui vous ouvre les appels Horizon Europe, les partenariats BATT4EU &amp; IAM4EU, et un réseau européen. Éprouvé depuis 2022, désormais élargi des batteries aux matériaux avancés.</p>
+<div class="hero-stats">
+<div class="stat-chip"><b>18</b><span data-en="organisations supported"> organisations accompagnées</span></div>
+<div class="stat-chip"><b>5</b><span data-en="funded projects"> projets financés</span></div>
+<div class="stat-chip"><b data-en="×12.5">×12,5</b><span data-en="leverage effect"> effet de levier</span></div>
+<div class="stat-chip"><b data-en="€2.5M">2,5 M€</b><span data-en="confirmed funding"> financements confirmés</span></div>
+</div>
+<div class="hero-btns">
+<a class="btn-primary" data-en="Join the programme" href="#contact">Rejoindre le programme</a>
+<a class="btn-ghost" data-en="Explore the sectors" href="#secteurs">Découvrir les secteurs</a>
+</div>
+</div>
 </header>
-
 <!-- STRATEGIC SECTORS -->
 <section class="sectors" id="secteurs">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Secteurs stratégiques</div>
-      <h2>Un programme couvrant les matériaux de demain</h2>
-      <p>Le Parcours Europe+ s'appuie sur deux partenariats européens complémentaires : les batteries (BATT4EU) et les matériaux avancés (IAM4EU).</p>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-title"><span class="cat-badge">IAM4EU</span><h3>Matériaux Avancés — Innovative Advanced Materials for Europe</h3></div>
-      <div class="sector-grid">
-
-        <div class="sector-card">
-          <div class="icon ic-blue">🧪</div>
-          <h3>Advanced Materials</h3>
-          <p>Matériaux avancés et manufacturés : de la formulation au composant intégré.</p>
-          <div class="tags"><span class="tag">Polymères</span><span class="tag">Composites</span><span class="tag">Aimants</span><span class="tag">Céramiques</span></div>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-teal">♻️</div>
-          <h3>Circularité &amp; Recyclage</h3>
-          <p>Concevoir et produire dans l'économie circulaire, de la conception au marché.</p>
-          <div class="tags"><span class="tag">Design-to-market</span><span class="tag">Économie circulaire</span></div>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-gold">⚙️</div>
-          <h3>Manufacturing Avancé</h3>
-          <p>Procédés durables et sobres en matières premières critiques (CRMs).</p>
-          <div class="tags"><span class="tag">Réduction CRM</span><span class="tag">Procédés durables</span></div>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-purple">🤖</div>
-          <h3>Digitalisation / IA</h3>
-          <p>Accélérer la découverte et l'optimisation des matériaux par le numérique.</p>
-          <div class="tags"><span class="tag">IA &amp; simulation</span><span class="tag">Découverte de matériaux</span></div>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-green">🌱</div>
-          <h3>Énergie &amp; Décarbonation</h3>
-          <p>Procédés bas-carbone au service de la transition énergétique.</p>
-          <div class="tags"><span class="tag">Procédés bas-carbone</span><span class="tag">Énergie</span></div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3>Batteries — European Partnership for Batteries</h3></div>
-      <div class="sector-grid">
-
-        <div class="sector-card">
-          <div class="icon ic-blue">🔋</div>
-          <h3>Technologies nouvelles &amp; émergentes</h3>
-          <p>Exploration des concepts de cellules post-lithium-ion et des innovations de rupture.</p>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-teal">⛏️</div>
-          <h3>Matières premières &amp; recyclage</h3>
-          <p>Sécurisation de l'approvisionnement, approches éthiques et procédés de recyclage en fin de vie.</p>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-gold">🧬</div>
-          <h3>Matériaux avancés</h3>
-          <p>Développement et caractérisation de nouveaux composants pour les électrodes et les électrolytes.</p>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-purple">🏭</div>
-          <h3>Conception &amp; fabrication de cellules</h3>
-          <p>Amélioration des processus industriels de production et de l'efficacité des gigafactories.</p>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-green">🚗</div>
-          <h3>Applications de mobilité &amp; intégration</h3>
-          <p>Adaptation des systèmes de batteries pour les véhicules électriques et les transports.</p>
-        </div>
-
-        <div class="sector-card">
-          <div class="icon ic-blue">🏠</div>
-          <h3>Applications stationnaires &amp; intégration</h3>
-          <p>Stockage de l'énergie pour le réseau électrique et les énergies renouvelables.</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="Strategic sectors">Secteurs stratégiques</div>
+<h2 data-en="A programme covering tomorrow's materials">Un programme couvrant les matériaux de demain</h2>
+<p data-en="Parcours Europe+ builds on two complementary European partnerships: batteries (BATT4EU) and advanced materials (IAM4EU).">Le Parcours Europe+ s'appuie sur deux partenariats européens complémentaires : les batteries (BATT4EU) et les matériaux avancés (IAM4EU).</p>
+</div>
+<div class="cat-block">
+<div class="cat-title"><span class="cat-badge">IAM4EU</span><h3>Matériaux Avancés — Innovative Advanced Materials for Europe</h3></div>
+<div class="sector-grid">
+<div class="sector-card">
+<div class="icon ic-blue">🧪</div>
+<h3>Advanced Materials</h3>
+<p data-en="Advanced and engineered materials: from formulation to integrated components.">Matériaux avancés et manufacturés : de la formulation au composant intégré.</p>
+<div class="tags"><span class="tag" data-en="Polymers">Polymères</span><span class="tag">Composites</span><span class="tag" data-en="Magnets">Aimants</span><span class="tag" data-en="Ceramics">Céramiques</span></div>
+</div>
+<div class="sector-card">
+<div class="icon ic-teal">♻️</div>
+<h3 data-en="Circularity &amp; Recycling">Circularité &amp; Recyclage</h3>
+<p data-en="Designing and producing in the circular economy, from concept to market.">Concevoir et produire dans l'économie circulaire, de la conception au marché.</p>
+<div class="tags"><span class="tag">Design-to-market</span><span class="tag" data-en="Circular economy">Économie circulaire</span></div>
+</div>
+<div class="sector-card">
+<div class="icon ic-gold">⚙️</div>
+<h3 data-en="Advanced Manufacturing">Manufacturing Avancé</h3>
+<p data-en="Sustainable processes with low critical raw material (CRM) intensity.">Procédés durables et sobres en matières premières critiques (CRMs).</p>
+<div class="tags"><span class="tag" data-en="CRM reduction">Réduction CRM</span><span class="tag" data-en="Sustainable processes">Procédés durables</span></div>
+</div>
+<div class="sector-card">
+<div class="icon ic-purple">🤖</div>
+<h3 data-en="Digitalisation / AI">Digitalisation / IA</h3>
+<p data-en="Accelerating materials discovery and optimisation through digital tools.">Accélérer la découverte et l'optimisation des matériaux par le numérique.</p>
+<div class="tags"><span class="tag" data-en="AI &amp; simulation">IA &amp; simulation</span><span class="tag" data-en="Materials discovery">Découverte de matériaux</span></div>
+</div>
+<div class="sector-card">
+<div class="icon ic-green">🌱</div>
+<h3 data-en="Energy &amp; Decarbonisation">Énergie &amp; Décarbonation</h3>
+<p data-en="Low-carbon processes serving the energy transition.">Procédés bas-carbone au service de la transition énergétique.</p>
+<div class="tags"><span class="tag" data-en="Low-carbon processes">Procédés bas-carbone</span><span class="tag" data-en="Energy">Énergie</span></div>
+</div>
+</div>
+</div>
+<div class="cat-block">
+<div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3>Batteries — European Partnership for Batteries</h3></div>
+<div class="sector-grid">
+<div class="sector-card">
+<div class="icon ic-blue">🔋</div>
+<h3 data-en="Novel &amp; emerging technologies">Technologies nouvelles &amp; émergentes</h3>
+<p data-en="Exploring post-lithium-ion cell concepts and breakthrough innovations.">Exploration des concepts de cellules post-lithium-ion et des innovations de rupture.</p>
+</div>
+<div class="sector-card">
+<div class="icon ic-teal">⛏️</div>
+<h3 data-en="Raw materials &amp; recycling">Matières premières &amp; recyclage</h3>
+<p data-en="Supply security, ethical approaches and end-of-life recycling processes.">Sécurisation de l'approvisionnement, approches éthiques et procédés de recyclage en fin de vie.</p>
+</div>
+<div class="sector-card">
+<div class="icon ic-gold">🧬</div>
+<h3 data-en="Advanced materials">Matériaux avancés</h3>
+<p data-en="Development and characterisation of new components for electrodes and electrolytes.">Développement et caractérisation de nouveaux composants pour les électrodes et les électrolytes.</p>
+</div>
+<div class="sector-card">
+<div class="icon ic-purple">🏭</div>
+<h3 data-en="Cell design &amp; manufacturing">Conception &amp; fabrication de cellules</h3>
+<p data-en="Improving industrial production processes and gigafactory efficiency.">Amélioration des processus industriels de production et de l'efficacité des gigafactories.</p>
+</div>
+<div class="sector-card">
+<div class="icon ic-green">🚗</div>
+<h3 data-en="Mobility applications &amp; integration">Applications de mobilité &amp; intégration</h3>
+<p data-en="Adapting battery systems for electric vehicles and transport.">Adaptation des systèmes de batteries pour les véhicules électriques et les transports.</p>
+</div>
+<div class="sector-card">
+<div class="icon ic-blue">🏠</div>
+<h3 data-en="Stationary applications &amp; integration">Applications stationnaires &amp; intégration</h3>
+<p data-en="Energy storage for the power grid and renewables.">Stockage de l'énergie pour le réseau électrique et les énergies renouvelables.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- DOMAINS -->
 <section class="domains" id="domaines">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Domaines d'application</div>
-      <h2>Conçu pour tous les secteurs industriels stratégiques</h2>
-      <p>Quel que soit votre domaine, le programme connecte votre R&amp;I aux bons appels européens.</p>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-title"><span class="cat-badge">IAM4EU</span><h3>Matériaux Avancés — domaines d'application</h3></div>
-      <div class="domain-grid">
-        <div class="domain-item"><div class="n">1</div><div><h4>Énergie &amp; Renouvelables</h4><p>Génération, stockage, efficacité</p></div></div>
-        <div class="domain-item"><div class="n">2</div><div><h4>Électronique &amp; Semiconducteurs</h4><p>Composants, matériaux, embarqué</p></div></div>
-        <div class="domain-item"><div class="n">3</div><div><h4>Manufacturing</h4><p>Industrialisation &amp; procédés</p></div></div>
-        <div class="domain-item"><div class="n">4</div><div><h4>Dispositifs Médicaux</h4><p>Matériaux biocompatibles &amp; innovation</p></div></div>
-        <div class="domain-item"><div class="n">5</div><div><h4>Mobilité</h4><p>Automotive, aérospatial, maritime</p></div></div>
-        <div class="domain-item"><div class="n">6</div><div><h4>Construction</h4><p>Matériaux durables &amp; bâtiment</p></div></div>
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3>Batteries — domaines d'application</h3></div>
-      <div class="domain-grid bat-grid">
-        <div class="domain-item">
-          <div class="n">🚗</div>
-          <div><h4>Mobilité électrique</h4><p>L'électrification des véhicules routiers reste le premier moteur de la demande.</p></div>
-        </div>
-        <div class="domain-item">
-          <div class="n">⚡</div>
-          <div><h4>Transition énergétique</h4><p>Le stockage stationnaire pour la stabilité des réseaux et l'intégration des énergies renouvelables.</p></div>
-        </div>
-        <div class="domain-item">
-          <div class="n">✈️</div>
-          <div><h4>Aéronautique et défense</h4><p>Des applications de pointe exigeant des densités d'énergie élevées et des standards de sécurité rigoureux.</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="Application domains">Domaines d'application</div>
+<h2 data-en="Designed for every strategic industrial sector">Conçu pour tous les secteurs industriels stratégiques</h2>
+<p data-en="Whatever your field, the programme connects your R&amp;I to the right European calls.">Quel que soit votre domaine, le programme connecte votre R&amp;I aux bons appels européens.</p>
+</div>
+<div class="cat-block">
+<div class="cat-title"><span class="cat-badge">IAM4EU</span><h3 data-en="Advanced Materials — application domains">Matériaux Avancés — domaines d'application</h3></div>
+<div class="domain-grid">
+<div class="domain-item"><div class="n">1</div><div><h4 data-en="Energy &amp; Renewables">Énergie &amp; Renouvelables</h4><p data-en="Generation, storage, efficiency">Génération, stockage, efficacité</p></div></div>
+<div class="domain-item"><div class="n">2</div><div><h4 data-en="Electronics &amp; Semiconductors">Électronique &amp; Semiconducteurs</h4><p data-en="Components, materials, embedded">Composants, matériaux, embarqué</p></div></div>
+<div class="domain-item"><div class="n">3</div><div><h4>Manufacturing</h4><p data-en="Industrialisation &amp; processes">Industrialisation &amp; procédés</p></div></div>
+<div class="domain-item"><div class="n">4</div><div><h4 data-en="Medical Devices">Dispositifs Médicaux</h4><p data-en="Biocompatible materials &amp; innovation">Matériaux biocompatibles &amp; innovation</p></div></div>
+<div class="domain-item"><div class="n">5</div><div><h4 data-en="Mobility">Mobilité</h4><p data-en="Automotive, aerospace, maritime">Automotive, aérospatial, maritime</p></div></div>
+<div class="domain-item"><div class="n">6</div><div><h4>Construction</h4><p data-en="Sustainable materials &amp; construction">Matériaux durables &amp; bâtiment</p></div></div>
+</div>
+</div>
+<div class="cat-block">
+<div class="cat-title"><span class="cat-badge bat">BATT4EU</span><h3 data-en="Batteries — application domains">Batteries — domaines d'application</h3></div>
+<div class="domain-grid bat-grid">
+<div class="domain-item">
+<div class="n">🚗</div>
+<div><h4 data-en="Electric mobility">Mobilité électrique</h4><p data-en="Road vehicle electrification remains the primary demand driver.">L'électrification des véhicules routiers reste le premier moteur de la demande.</p></div>
+</div>
+<div class="domain-item">
+<div class="n">⚡</div>
+<div><h4 data-en="Energy transition">Transition énergétique</h4><p data-en="Stationary storage for grid stability and renewable energy integration.">Le stockage stationnaire pour la stabilité des réseaux et l'intégration des énergies renouvelables.</p></div>
+</div>
+<div class="domain-item">
+<div class="n">✈️</div>
+<div><h4 data-en="Aerospace &amp; defence">Aéronautique et défense</h4><p data-en="Cutting-edge applications demanding high energy density and rigorous safety standards.">Des applications de pointe exigeant des densités d'énergie élevées et des standards de sécurité rigoureux.</p></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- PROOF NUMBERS -->
 <section class="proof" id="preuves">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Résultats 2022-2026</div>
-      <h2>Des résultats concrets, mesurables</h2>
-      <p>Le bilan du Parcours Europe Batteries parle de lui-même.</p>
-    </div>
-    <div class="proof-grid">
-      <div class="proof-card"><div class="big">18</div><p>Organisations wallonnes accompagnées</p></div>
-      <div class="proof-card"><div class="big">5</div><p>Projets européens financés</p><div class="small">3 Horizon Europe · 1 Eurocluster · 1 Eureka</div></div>
-      <div class="proof-card"><div class="big">2,5 M€</div><p>Financements européens confirmés</p></div>
-      <div class="proof-card"><div class="big">×12,5</div><p>Effet de levier</p><div class="small">12,5 € de financement pour 1 € investi</div></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="Results 2022-2026">Résultats 2022-2026</div>
+<h2 data-en="Concrete, measurable results">Des résultats concrets, mesurables</h2>
+<p data-en="The Parcours Europe Batteries track record speaks for itself.">Le bilan du Parcours Europe Batteries parle de lui-même.</p>
+</div>
+<div class="proof-grid">
+<div class="proof-card"><div class="big">18</div><p data-en="Walloon organisations supported">Organisations wallonnes accompagnées</p></div>
+<div class="proof-card"><div class="big">5</div><p data-en="Funded European projects">Projets européens financés</p><div class="small">3 Horizon Europe · 1 Eurocluster · 1 Eureka</div></div>
+<div class="proof-card"><div class="big" data-en="€2.5M">2,5 M€</div><p data-en="Confirmed European funding">Financements européens confirmés</p></div>
+<div class="proof-card"><div class="big" data-en="×12.5">×12,5</div><p data-en="Leverage effect">Effet de levier</p><div class="small" data-en="€12.5 leveraged per €1 invested">12,5 € de financement pour 1 € investi</div></div>
+</div>
+</div>
 </section>
-
 <!-- VALUE -->
 <section class="value" id="valeur">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Pourquoi nous rejoindre</div>
-      <h2>Un accompagnement mutualisé, une efficacité décuplée</h2>
-      <p>Remplacer les approches isolées par un réseau coordonné : c'est la clé du succès en Europe.</p>
-    </div>
-    <div class="value-cols">
-      <div class="value-card"><div class="vi">🌍</div><div><h3>Réseau européen</h3><p>Connections partenaires internationales, au-delà des frontières wallonnes.</p></div></div>
-      <div class="value-card"><div class="vi">🎯</div><div><h3>Veille ciblée</h3><p>Overviews des marchés et des appels européens, sans effort de recherche.</p></div></div>
-      <div class="value-card"><div class="vi">🧭</div><div><h3>Coaching 1:1</h3><p>Suivi personnalisé pour maximiser vos chances de décrocher un projet EU.</p></div></div>
-      <div class="value-card"><div class="vi">🤝</div><div><h3>Mutualisation</h3><p>Un coût partagé pour un accès professionnel aux appels européens.</p></div></div>
-      <div class="value-card"><div class="vi">📈</div><div><h3>Interface policy</h3><p>Une fenêtre sur la programmation européenne et l'influence des sujets.</p></div></div>
-      <div class="value-card"><div class="vi">🔍</div><div><h3>Visibilité</h3><p>Votre organisation positionnée dans le paysage R&amp;I européen.</p></div></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="Why join us">Pourquoi nous rejoindre</div>
+<h2 data-en="Pooled support, multiplied efficiency">Un accompagnement mutualisé, une efficacité décuplée</h2>
+<p data-en="Replacing isolated approaches with a coordinated network is the key to success in Europe.">Remplacer les approches isolées par un réseau coordonné : c'est la clé du succès en Europe.</p>
+</div>
+<div class="value-cols">
+<div class="value-card"><div class="vi">🌍</div><div><h3 data-en="European network">Réseau européen</h3><p data-en="International partner connections, beyond Wallonia's borders.">Connections partenaires internationales, au-delà des frontières wallonnes.</p></div></div>
+<div class="value-card"><div class="vi">🎯</div><div><h3 data-en="Targeted monitoring">Veille ciblée</h3><p data-en="Overviews of European markets and calls, with no research effort.">Overviews des marchés et des appels européens, sans effort de recherche.</p></div></div>
+<div class="value-card"><div class="vi">🧭</div><div><h3>Coaching 1:1</h3><p data-en="Personalised follow-up to maximise your chances of winning an EU project.">Suivi personnalisé pour maximiser vos chances de décrocher un projet EU.</p></div></div>
+<div class="value-card"><div class="vi">🤝</div><div><h3 data-en="Pooling">Mutualisation</h3><p data-en="A shared cost for professional access to European calls.">Un coût partagé pour un accès professionnel aux appels européens.</p></div></div>
+<div class="value-card"><div class="vi">📈</div><div><h3 data-en="Policy interface">Interface policy</h3><p data-en="A window onto European programming and the chance to influence topics.">Une fenêtre sur la programmation européenne et l'influence des sujets.</p></div></div>
+<div class="value-card"><div class="vi">🔍</div><div><h3 data-en="Visibility">Visibilité</h3><p data-en="Your organisation positioned in the European R&amp;I landscape.">Votre organisation positionnée dans le paysage R&amp;I européen.</p></div></div>
+</div>
+</div>
 </section>
-
 <!-- SERVICES -->
 <section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Services inclus</div>
-      <h2>Ce que le programme vous offre</h2>
-      <p>Un menu complet d'accompagnement, adapté à chaque membre.</p>
-    </div>
-    <div class="service-list">
-      <div class="service-card"><span class="freq">1× / an</span><h3>Mission R&amp;I</h3><p>Au moins une mission collective par an pour nouer des contacts européens.</p></div>
-      <div class="service-card"><span class="freq">2× / an</span><h3>Network R&amp;I</h3><p>Deux réunions de l'écosystème wallon par an.</p></div>
-      <div class="service-card"><span class="freq">2× / an</span><h3>Overview Market &amp; Policy</h3><p>Vues d'ensemble des marchés et des politiques européennes.</p></div>
-      <div class="service-card"><span class="freq">2× / an</span><h3>Overview R&amp;I</h3><p>Vues d'ensemble des appels européens, avec possibilité d'influencer les sujets.</p></div>
-      <div class="service-card"><span class="freq">2× / an</span><h3>Coaching 1:1</h3><p>Accompagnement personnalisé pour augmenter vos chances de succès.</p></div>
-      <div class="service-card"><span class="freq">1+ / an</span><h3>Matchmaking</h3><p>Mise en relation ciblée sur les appels BATT4EU et IAM4EU.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="Included services">Services inclus</div>
+<h2 data-en="What the programme offers">Ce que le programme vous offre</h2>
+<p data-en="A full support menu, tailored to each member.">Un menu complet d'accompagnement, adapté à chaque membre.</p>
+</div>
+<div class="service-list">
+<div class="service-card"><span class="freq" data-en="1× / year">1× / an</span><h3 data-en="R&amp;I mission">Mission R&amp;I</h3><p data-en="At least one collective mission per year to build European connections.">Au moins une mission collective par an pour nouer des contacts européens.</p></div>
+<div class="service-card"><span class="freq" data-en="2× / year">2× / an</span><h3>Network R&amp;I</h3><p data-en="Two Walloon ecosystem meetings per year.">Deux réunions de l'écosystème wallon par an.</p></div>
+<div class="service-card"><span class="freq" data-en="2× / year">2× / an</span><h3>Overview Market &amp; Policy</h3><p data-en="Overviews of European markets and policies.">Vues d'ensemble des marchés et des politiques européennes.</p></div>
+<div class="service-card"><span class="freq" data-en="2× / year">2× / an</span><h3>Overview R&amp;I</h3><p data-en="Overviews of European calls, with the opportunity to influence topics.">Vues d'ensemble des appels européens, avec possibilité d'influencer les sujets.</p></div>
+<div class="service-card"><span class="freq" data-en="2× / year">2× / an</span><h3>Coaching 1:1</h3><p data-en="Tailored support to increase your chances of success.">Accompagnement personnalisé pour augmenter vos chances de succès.</p></div>
+<div class="service-card"><span class="freq" data-en="1+ / year">1+ / an</span><h3>Matchmaking</h3><p data-en="Targeted matchmaking on BATT4EU and IAM4EU calls.">Mise en relation ciblée sur les appels BATT4EU et IAM4EU.</p></div>
+</div>
+</div>
 </section>
-
 <!-- TIMELINE -->
 <section class="timeline" id="calendrier">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Calendrier 12 mois</div>
-      <h2>Une feuille de route sur l'année (tentative)</h2>
-    </div>
-    <div class="tl-wrap">
-      <div class="tl-block">
-        <div class="q">Q3 2026</div>
-        <ul>
-          <li>Réunion écosystème Batteries / Matériaux</li>
-          <li>Accompagnement individuel</li>
-          <li>Matchmaking BATT4EU · IAM4EU</li>
-        </ul>
-      </div>
-      <div class="tl-block">
-        <div class="q">Q4 2026</div>
-        <ul>
-          <li>Accompagnement individuel continu</li>
-          <li>Suivi des appels européens</li>
-        </ul>
-      </div>
-      <div class="tl-block">
-        <div class="q">Q1 2027</div>
-        <ul>
-          <li>Visite FR / DE / UK / NL</li>
-          <li>Réunion écosystème Batteries / Matériaux</li>
-        </ul>
-      </div>
-      <div class="tl-block">
-        <div class="q">Q2 2027</div>
-        <ul>
-          <li>Conférence Batteries</li>
-          <li>Conférence Matériaux</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="sec-head">
+<div class="tag" data-en="12-month calendar">Calendrier 12 mois</div>
+<h2 data-en="A year-round roadmap (draft)">Une feuille de route sur l'année (tentative)</h2>
+</div>
+<div class="tl-wrap">
+<div class="tl-block">
+<div class="q">Q3 2026</div>
+<ul>
+<li data-en="Batteries / Materials ecosystem meeting">Réunion écosystème Batteries / Matériaux</li>
+<li data-en="Individual support">Accompagnement individuel</li>
+<li data-en="BATT4EU · IAM4EU matchmaking">Matchmaking BATT4EU · IAM4EU</li>
+</ul>
+</div>
+<div class="tl-block">
+<div class="q">Q4 2026</div>
+<ul>
+<li data-en="Ongoing individual support">Accompagnement individuel continu</li>
+<li data-en="European call monitoring">Suivi des appels européens</li>
+</ul>
+</div>
+<div class="tl-block">
+<div class="q">Q1 2027</div>
+<ul>
+<li data-en="Field trip FR / DE / UK / NL">Visite FR / DE / UK / NL</li>
+<li data-en="Batteries / Materials ecosystem meeting">Réunion écosystème Batteries / Matériaux</li>
+</ul>
+</div>
+<div class="tl-block">
+<div class="q">Q2 2027</div>
+<ul>
+<li data-en="Batteries conference">Conférence Batteries</li>
+<li data-en="Materials conference">Conférence Matériaux</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-
 <!-- CTA -->
 <section class="cta-band" id="contact">
-  <h2>Rejoignez le prochain cercle de la R&amp;I wallonne vers l'Europe</h2>
-  <p>Places limitées pour l'édition 2026-2027 — <strong>minimum 10 acteurs</strong> pour lancer le programme.</p>
-  <a class="btn-white" href="https://outlook.office.com/bookwithme/user/9290d1b802844d64aab02470451c8dfc@polemecatech.be/meetingtype/d2jtWiR6z06w794jRPSEBw2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" target="_blank" rel="noopener">Prendre rendez-vous</a>
+<h2 data-en="Join the next circle taking Walloon R&amp;I to Europe">Rejoignez le prochain cercle de la R&amp;I wallonne vers l'Europe</h2>
+<p><span data-en="Limited places for the 2026-2027 edition —">Places limitées pour l'édition 2026-2027 — </span><strong data-en="minimum 10 players">minimum 10 acteurs</strong><span data-en="to launch the programme."> pour lancer le programme.</span></p>
+<a class="btn-white" data-en="Book a meeting" href="https://outlook.office.com/bookwithme/user/9290d1b802844d64aab02470451c8dfc@polemecatech.be/meetingtype/d2jtWiR6z06w794jRPSEBw2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" rel="noopener" target="_blank">Prendre rendez-vous</a>
 </section>
-
 <footer>
-  <div class="wrap">
-    <div><strong>Pôle MecaTech</strong> · Parcours Europe+ Matériaux/Batteries — BATT4EU × IAM4EU</div>
-    <div>Avenue d'Ecolys 2 bte 33 · 5020 Namur (Ecolys) · Belgique</div>
-  </div>
+<div class="wrap">
+<div><strong>Pôle MecaTech</strong> · Parcours Europe+ Matériaux/Batteries — BATT4EU × IAM4EU</div>
+<div>Avenue d'Ecolys 2 bte 33 · 5020 Namur (Ecolys) · Belgique</div>
+</div>
 </footer>
+
+<script>
+const I18N = [];
+document.querySelectorAll('[data-en]').forEach(el => I18N.push({ el, fr: el.innerHTML, en: el.dataset.en }));
+function setLang(l){ applyLang(l); }
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  I18N.forEach(({el, fr, en}) => { el.innerHTML = (lang === 'en') ? en : fr; });
+  document.querySelectorAll('#langswitch button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  try { localStorage.setItem('peplus-lang', lang); } catch (e) {}
+}
+(function(){
+  let saved = 'fr';
+  try { saved = localStorage.getItem('peplus-lang') || 'fr'; } catch (e) {}
+  applyLang(saved);
+})();
+</script>
 
 </body>
 </html>
